@@ -1,0 +1,95 @@
+body{
+    font-family: 'Ubuntu';
+}
+.auth{
+    background: url(../../assets/auth_background.png);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.auth__container{
+    padding: 64px;
+    border-radius: 20px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.auth__container > * {
+    width: 100%;
+}
+
+.auth__form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.auth__form>:last-child{
+    margin-top: 40px;
+}
+
+.auth__container__title{
+    color:#464646;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+
+.auth__input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.auth__input-container input::placeholder{
+    text-align: center;
+}
+.auth__input-container input{
+    padding: 12px 32px;
+    border-radius: 8px;
+    border: 1px solid #AFAFAF;
+    background: inherit;
+    width: 100%;
+    text-align: center;
+}
+
+.auth__input-container label{
+    color: #464646;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+}
+.button {
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.--active__green{
+    background: #4CC179;
+    color: #FFF;
+}
+
+.--disabled{
+    background: inherit;
+    color: #4CC179;
+    border: 1px solid #4CC179;
+}
+
+.--disabled__dark{
+    background: #4A4754;
+    color: #C2C1C8;
+}

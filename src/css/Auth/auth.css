@@ -1,5 +1,9 @@
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('../../fonts/gothampro.ttf');
+}
 body{
-    font-family: 'Ubuntu';
+    font-family: 'Gotham Pro';
 }
 .auth{
     background: url(../../assets/auth_background.png);
@@ -25,11 +29,18 @@ body{
 .auth__form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 
+.auth__form__title{
+    align-self: center;
+}
+
 .auth__form>:last-child{
-    margin-top: 40px;
+    margin-top: 20px;
+    width: 100%;
 }
 
 .auth__container__title{
@@ -46,6 +57,7 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    width: 100%;
 }
 
 .auth__input-container input::placeholder{
@@ -92,4 +104,22 @@ body{
 .--disabled__dark{
     background: #4A4754;
     color: #C2C1C8;
+}
+
+.verification_code{
+    width: 40px;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #464646;
+    background: inherit;
+    display: flex;
+    justify-content: center;
+}
+
+.verification_code__container{
+    width: 300px;
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    justify-content: center;
 }

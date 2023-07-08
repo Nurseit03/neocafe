@@ -1,9 +1,10 @@
 import React from 'react'
+import PhoneNumber from '../../../../components/Auth/PhoneNumber';
 
 const Login = () => {
     return (
         <div className='auth'>
-            <p>LLLOFdkofsdn</p>
+            <PhoneNumber title='Вход' requestUrl='someurl' nextPage='/LoginVerificationCode'/>
         </div>
     )
 }

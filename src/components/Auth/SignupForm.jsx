@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SignupForm = ({ title }) => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [dateOfBirth, setDateOfBirth] = useState('');
-    const [userData, setUserData] = useState(null);
+    // const [userData, setUserData] = useState(null);
+    const navigate = useNavigate();
 
     const handleFirstNameChange = (event) => {
         setFirstName(event.target.value);
@@ -25,8 +27,11 @@ const SignupForm = ({ title }) => {
             last_name: lastName,
             date_of_birth: dateOfBirth
         };
-        setUserData(data);
-        console.log('UserData:', data);
+        console.log('Neocafe_UserData:', data);
+        localStorage.setItem('Neocafe_UserData', JSON.stringify(data));
+        
+        navigate('/SignupPhoneNumber');
+        
     };
 
     const isFormValid = firstName !== '' && lastName !== '' && dateOfBirth !== '';

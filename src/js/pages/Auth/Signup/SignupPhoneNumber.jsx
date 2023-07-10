@@ -4,7 +4,7 @@ import PhoneNumber from '../../../../components/Auth/PhoneNumber';
 const SignupPhoneNumber = () => {
     return (
         <div className='auth'>
-            <PhoneNumber title='Регистрация' requestUrl='someurl' nextPage='/SignupVerificationCode'/>
+            <PhoneNumber title='Регистрация' requestUrl='/register/phone' nextPage='/SignupVerificationCode' isPage='signup'/>
         </div>
     )
 }

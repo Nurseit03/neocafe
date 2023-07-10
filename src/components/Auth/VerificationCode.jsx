@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import AuthCode from 'react-auth-code-input';
-
+import axios from '../../js/api/axios';
 
 const VerificationCode = ({ title, subtitle, requestUrl, nextPage }) => {
     const [verificationCode, setVerificationCode] = useState('');
@@ -19,8 +19,24 @@ const VerificationCode = ({ title, subtitle, requestUrl, nextPage }) => {
         verification_code: verificationCode
       };
       console.log('UserData:', data);
-      navigate(`${nextPage}`);
+      handleSignup(data);
     };
+
+    const handleSignup = async (data) => {
+      try {
+        const response = await axios.post(`${requestUrl}`, data);
+        if (!(response.status === 201 || response.status === 200)) {
+          console.log(response);
+          throw new Error("Network response was not ok");
+        }
+        navigate(`${nextPage}`);
+        console.log('Response:', response);
+        return response;
+      } catch (error) {
+        console.log("Error:", error);
+        alert("Неправильный код");
+      }
+  }
   
     return (
       <>

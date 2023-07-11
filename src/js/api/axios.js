@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://159.223.28.95/auth";
+const BASE_URL = "https://nataliya-backender.org.kg/auth";
 
 export default axios.create({
     baseURL: BASE_URL,  

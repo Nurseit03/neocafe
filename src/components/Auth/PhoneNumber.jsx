@@ -17,6 +17,7 @@ const PhoneNumber = ({ title, requestUrl, nextPage, isPage }) => {
       const updatedData = {
           phone_number: phoneNumber
       };
+      localStorage.setItem('Neocafe_UserData',JSON.stringify(updatedData) );
       handleSignup(updatedData);
     } else if (isPage === 'signup'){
       const existingData = JSON.parse(localStorage.getItem('Neocafe_UserData'));
